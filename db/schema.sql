@@ -6,7 +6,6 @@ CREATE TABLE burgers
 (
 	task_id int NOT NULL AUTO_INCREMENT,
 	burger_name varchar(255) NOT NULL,
-  devoured BOOLEAN,
-  date 
+  devoured BOOLEAN DEFAULT false,
 	PRIMARY KEY (task_id)
 );
