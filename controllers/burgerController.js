@@ -1,13 +1,13 @@
 const express = require("express"),
        router = express.Router(),
-       require("../models/burger.js");
+       burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
  burger.all(function(data) {
-   var burgersObject = {
+   let burgersObject = {
      burgers: data
    };
-   console.log(hbsObject);
+   console.log(burgersObject);
    //res.render("index", burgersObject);
  });
 });
