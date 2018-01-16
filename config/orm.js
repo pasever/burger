@@ -1,6 +1,6 @@
 const connection = require("./connection.js");
 
-let orm = {
+const orm = {
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
@@ -15,7 +15,7 @@ let orm = {
 
 
 
-  
+
 };
 
 

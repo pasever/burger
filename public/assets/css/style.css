@@ -30,3 +30,6 @@ input[type=submit], input[type=text] {
   margin: 0;
   height: 50px; /* or whatever height necessary */
 }
+.col-md-8 {
+  padding-top: 10%;
+}
