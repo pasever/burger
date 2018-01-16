@@ -8,3 +8,25 @@ body {
 p b {
   font-size: 24px;
 }
+h1 {
+  padding-bottom: 2%;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#first{
+  padding-top: 3%;
+}
+#second {
+  padding-top: 5%;
+}
+
+input[type=submit], input[type=text] {
+  font-size: 18px;
+  line-height: 18px;
+  float: left;
+  border: 0;
+  display: block;
+  margin: 0;
+  height: 50px; /* or whatever height necessary */
+}

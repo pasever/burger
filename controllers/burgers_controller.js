@@ -4,9 +4,8 @@ const express = require("express"),
 
 
 router.get("/", function(req, res) {
-  console.log(res.body);
+  //console.log(res.body);
   console.log("Hello World!");
-
   router.redirect("/burgers");
 });
 
