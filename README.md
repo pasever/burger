@@ -46,9 +46,13 @@
 ├── public
 │   ├── assets
 │   │   ├── css
-│   │   │   └── burger_style.css
+│   |   |   |
+|   |   |   |-- reset.css
+|   |   |   └── style.css
+|   │   │---- javascript  
+|   |   |
 │   │   └── img
-│   │       └── burger.png
+│   │       └── eaters.png
 │   └── test.html
 │
 ├── server.js
@@ -64,3 +68,4 @@
 ## Copyright
 
 MIT
+Evgheni Pascalov
