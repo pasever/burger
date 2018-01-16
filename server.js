@@ -2,7 +2,7 @@ const express = require("express"),
    bodyParser = require("body-parser"),
          PORT = process.env.PORT || 8000,
           app = express(),
-       routes = require("./controllers/burgerController.js");
+       routes = require("./controllers/burgers_controller.js");
 
 app.use(express.static("public"));
 
