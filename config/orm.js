@@ -8,9 +8,21 @@ let orm = {
         throw err;
       }
       cb(result);
+      console.log(result);
     });
   }
+
+
+
+
+  
 };
 
-// Export the orm object for the model (cat.js).
+
+
+
+
+
+
+
 module.exports = orm;

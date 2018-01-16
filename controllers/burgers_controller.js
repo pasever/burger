@@ -4,11 +4,14 @@ const express = require("express"),
 
 
 router.get("/", function(req, res) {
+  console.log(res.body);
+  console.log("Hello World!");
+
   router.redirect("/burgers");
 });
 
 router.get("/burgers", function(req, res) {
-  burgers.all(function(burgersObject) {
+  burger.all(function(burgersObject) {
     res.render("index", { burgersObject: burgersObject });
   });
 });
