@@ -4,8 +4,8 @@ USE burgers_db;
 
 CREATE TABLE burgers
 (
-	task_id int NOT NULL AUTO_INCREMENT,
+	id int NOT NULL AUTO_INCREMENT,
 	burger_name varchar(255) NOT NULL,
   devoured BOOLEAN DEFAULT false,
-	PRIMARY KEY (task_id)
+	PRIMARY KEY (id)
 );

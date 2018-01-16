@@ -1,2 +1,3 @@
 INSERT INTO burgers (burger_name, devoured) VALUES ('Italian Parmesan', true);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Philly CHeese Steak', FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Philly CHeese Steak', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Burger', false);
