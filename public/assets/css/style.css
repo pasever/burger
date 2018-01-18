@@ -10,10 +10,20 @@ p b {
 }
 h1 {
   padding-bottom: 2%;
-  font-size: 40px;
+  font-size: 46px;
   font-weight: bold;
 }
 
+/* .label {
+  width: 350px;
+  text-align: center;
+  margin: 10px;
+} */
+
+/* h1 {
+  font-size: 60px;
+  padding-top: 2%;
+} */
 #first{
   padding-top: 3%;
 }
@@ -28,8 +38,19 @@ input[type=submit], input[type=text] {
   border: 0;
   display: block;
   margin: 0;
-  height: 50px; /* or whatever height necessary */
+  height: 55px; /* or whatever height necessary */
 }
 .col-md-8 {
   padding-top: 10%;
+}
+div pre {
+  font-family: Gill Sans Extrabold, sans-serif;
+
+}
+::-webkit-input-placeholder {
+   font-family: Gill Sans Extrabold, sans-serif;
+   text-align: center;
+}
+#clear, #devour {
+  margin-top: 15%;
 }
