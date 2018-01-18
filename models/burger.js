@@ -6,15 +6,15 @@ const burger = {
     orm.all("burgers", function(res) {
       callback(res);
     });
+  },
+  create: function(name, callback) {
+    orm.create("burgers", [
+      "burger_name", "devoured"
+    ], [
+      name, false
+    ], callback);
   }
-  // ,
-  // create: function(name, cb) {
-  //   orm.create("burgers", [
-  //     "burger_name", "devoured"
-  //   ], [
-  //     name, false
-  //   ], cb);
-  // },
+  //,
   // update: function(id, cb) {
   //   var condition = "id=" + id;
   //   orm.update("burgers", {

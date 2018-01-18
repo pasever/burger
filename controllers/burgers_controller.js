@@ -6,12 +6,20 @@ const express = require("express"),
 router.get("/", function(req, res) {
   //console.log(res.body);
   console.log("Hello World!");
-  router.redirect("/burgers");
+  res.redirect("/burgers");
 });
 
 router.get("/burgers", function(req, res) {
   burger.all(function(burgersObject) {
     res.render("index", { burgersObject: burgersObject });
+  });
+});
+
+router.post("/burgers/create", function(req, res) {
+  burger.create(req.body.burger_name, function(result) {
+    console.log(req.body);
+    console.log(result);
+    res.redirect("/burgers");
   });
 });
 

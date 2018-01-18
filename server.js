@@ -4,9 +4,8 @@ const express = require("express"),
           app = express(),
        routes = require("./controllers/burgers_controller.js");
 
+
 app.use(express.static("public"));
-
-
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
