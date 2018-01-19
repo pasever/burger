@@ -14,6 +14,10 @@ h1 {
   font-weight: bold;
 }
 
+#served {
+  margin-bottom: 3%;
+}
+
 /* .label {
   width: 350px;
   text-align: center;
