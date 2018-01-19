@@ -7,6 +7,7 @@ const burger = {
       callback(res);
     });
   },
+
   create: function(name, callback) {
     orm.create("burgers", [
       "burger_name", "devoured"

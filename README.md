@@ -2,7 +2,7 @@
 
 ### Quick Overview
 
-* Burger.Love.Com is a restaurant application that lets users input the names of burgers they'd like to eat.
+* from.Burgers.with.Love.Com is a restaurant application that lets users input the names of burgers they'd like to eat.
 
 * Whenever a user submits a burger's name, application displays the burger on the left side of the page -- waiting to be devoured.
 

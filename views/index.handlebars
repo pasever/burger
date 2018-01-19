@@ -30,6 +30,7 @@
 
 		<div class="col-xs-6 text-center" class="task">
 			<div class="row">
+
 				<div class="col-xs-10 text-center">
 					{{#each burgersObject}}
 						{{#if this.devoured}}
@@ -37,15 +38,22 @@
 						{{/if}}
 					{{/each}}
 				</div>
+
 				<div class="col-xs-2 text-center">
-					<button type="submit" class="btn btn-info" id="clear">Clear</button>
+					<form class="clear-form">
+						<input input type="hidden" class="" type="text" value= {{this.id}}>
+						<button type="submit" class="btn btn-info" id="clear">Clear</button>
+					</form>
 				</div>
+
 			</div>
 		</div>
 
 	</div>
 </div>
+<!-- // first container ends -->
 
+<!-- second containers starts -->
 <div class="container" id="second">
 	<div class="row">
 		<div class="col-md-2">
@@ -53,7 +61,7 @@
 		<div class="col-md-8 text-center enter_section">
 			<form action="/burgers/create" method="POST">
 				<input type="text" class="form-control" placeholder="Type in your order here..." name="burger_name" value="">
-				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+				<button type="submit" class="btn-block btn-lg btn-primary large" id="text-enter-button">Place order</button>
 			</form>
 		</div>
 		<div class="col-md-2">
