@@ -21,6 +21,11 @@ const burger = {
     orm.update("burgers", {
       devoured: true
     }, updValue, callback);
+  },
+
+  delete: function(id, callback) {
+    let updValue = `${id}`;
+    orm.delete("burgers", updValue, callback);
   }
 };
 

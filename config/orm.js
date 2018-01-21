@@ -70,6 +70,7 @@ const orm = {
       `DELETE FROM ${table} WHERE id = ${updValue};`;
 
     console.log(queryString);
+
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

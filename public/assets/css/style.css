@@ -31,9 +31,6 @@ h1 {
 #first{
   padding-top: 3%;
 }
-#second {
-  padding-top: 5%;
-}
 
 input[type=submit], input[type=text] {
   font-size: 18px;
@@ -42,7 +39,7 @@ input[type=submit], input[type=text] {
   border: 0;
   display: block;
   margin: 0;
-  height: 55px; /* or whatever height necessary */
+  height: 55px; 
 }
 .col-md-8 {
   padding-top: 10%;
