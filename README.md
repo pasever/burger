@@ -8,7 +8,11 @@
 
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger gets moved to the right side of the page.
 
+* Each burger is the served area has a `Clear it!` button. When the user clicks it, the burger order gets removed from the page and from the database.
+
 * Application stores every burger in a database, whether devoured or not.
+
+
 
 ### Tools Used
 
@@ -20,6 +24,7 @@
  -  MySQL shell
  -  Bootstrap
  -  JavaScript  
+ -  jQuery
 
 #### Directory structure
 
