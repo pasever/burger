@@ -1,41 +1,38 @@
 const express = require("express"),
-  burger = require("../models/burger.js"),
-  router = express.Router();
+       burger = require("../models/burger.js"),
+       router = express.Router();
 
 
-router.get("/", function(req, res) {
+router.get("/", (req, res) => {
   //console.log(res.body);
-  console.log("Hello World!");
   res.redirect("/burgers");
 });
 
-router.get("/burgers", function(req, res) {
-  burger.all(function(burgersObject) {
+router.get("/burgers", (req, res) => {
+  burger.all(burgersObject => {
     res.render("index", {
       burgersObject: burgersObject
     });
   });
 });
 
-router.post("/burgers/create", function(req, res) {
-  burger.create(req.body.burger_name, function(result) {
+router.post("/burgers/create", (req, res) => {
+  burger.create(req.body.burger_name, result => {
     console.log(req.body);
-    console.log(result);
     res.redirect("/burgers");
   });
 });
 
-router.put("/burgers/:id", function(req, res) {
-  burger.update(req.params.id, function(result) {
+router.put("/burgers/:id", (req, res) => {
+  burger.update(req.params.id, result => {
     console.log(req.body);
-    console.log(result);
     res.sendStatus(200);
   });
 });
 
-router.post("/burgers/delete/:id", function(req, res) {
+router.post("/burgers/delete/:id", (req, res) => {
   console.log(req.params.id);
-  burger.delete(req.params.id, function(result) {
+  burger.delete(req.params.id, result => {
     res.sendStatus(200);
   });
 });

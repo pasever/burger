@@ -2,13 +2,11 @@ const orm = require("../config/orm.js");
 
 const burger = {
 
-  all: function(callback) {
-    orm.all("burgers", function(res) {
-      callback(res);
-    });
+  all: callback => {
+    orm.all("burgers", res => callback(res); );
   },
 
-  create: function(name, callback) {
+  create: (name, callback) => {
     orm.create("burgers", [
       "burger_name", "devoured"
     ], [
@@ -16,14 +14,14 @@ const burger = {
     ], callback);
   },
 
-  update: function(id, callback) {
+  update: (id, callback) => {
     let updValue = "id=" + id;
     orm.update("burgers", {
       devoured: true
     }, updValue, callback);
   },
 
-  delete: function(id, callback) {
+  delete: (id, callback) => {
     let updValue = `${id}`;
     orm.delete("burgers", updValue, callback);
   }

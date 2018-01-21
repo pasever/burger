@@ -21,25 +21,24 @@ function objToSql(obj) {
 
 const orm = {
 
-  all: function(tableInput, callback) {
+  all: (tableInput, callback) => {
     var queryString = `SELECT * FROM ${tableInput};`;
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
       }
       callback(result);
-      console.log(result);
     });
   },
 
-  create: function(table, cols, vals, callback) {
+  create: (table, cols, vals, callback) => {
     let queryString =
     `INSERT INTO ${table} (${cols.toString()})
      VALUES (${printQuestionMarks(vals.length)});`;
 
      console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, vals, (err, result) => {
       if (err) {
         throw err;
       }
@@ -47,7 +46,7 @@ const orm = {
     });
   },
 
-  update: function(table, objColVals, updValue, callback) {
+  update: (table, objColVals, updValue, callback) => {
 
     let queryString =
     `UPDATE ${table} SET ${objToSql(objColVals)}
@@ -55,7 +54,7 @@ const orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
       }
@@ -63,15 +62,13 @@ const orm = {
     });
   },
 
-  delete: function(table, updValue, callback) {
+  delete: (table, updValue, callback) => {
   // DELETE FROM burgers WHERE id=3;
 
     let queryString =
       `DELETE FROM ${table} WHERE id = ${updValue};`;
 
-    console.log(queryString);
-
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
       }

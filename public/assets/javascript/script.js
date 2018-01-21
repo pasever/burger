@@ -1,36 +1,30 @@
-$(document).ready(function() {
+$(document).ready(() => {
 
-  $(".devour-form").on("submit", function(event) {
+  $(".devour-form").on("submit", event => {
     event.preventDefault();
 
     let burger_id = $(this).children(".burger_id").val();
-    console.log(burger_id);
 
     $.ajax({
         method: "PUT",
         url: "/burgers/" + burger_id
       })
-     .then(function(data) {
+     .then(data => {
         location.reload();
     });
   });
 
-  $(".clear-form").on("submit", function(event) {
+  $(".clear-form").on("submit", event => {
     event.preventDefault();
 
     let burger_id = $(this).children(".burger_id").val();
-    console.log(burger_id);
 
     $.ajax({
       method: "POST",
       url: "/burgers/delete/" + burger_id
     })
-    .then(function(data) {
+    .then(data => {
       location.reload();
     });
   });
-
-
-
-
 });

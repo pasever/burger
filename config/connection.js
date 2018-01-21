@@ -7,12 +7,12 @@ const mysql = require("mysql"),
     database: "burgers_db"
   });
 
-connection.connect(function(err) {
+connection.connect(err => {
   if (err) {
     console.error("Error: " + err.stack);
     return;
   }
-  console.log("Connected as id " + connection.threadId);
+    console.log("Connected as id " + connection.threadId);
 });
 
 module.exports = connection;
