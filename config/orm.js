@@ -20,8 +20,9 @@ function objToSql(obj) {
 
 
 const orm = {
+
   all: function(tableInput, callback) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
+    var queryString = `SELECT * FROM ${tableInput};`;
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
@@ -32,15 +33,11 @@ const orm = {
   },
 
   create: function(table, cols, vals, callback) {
-    let queryString = "INSERT INTO " + table;
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
+    let queryString =
+    `INSERT INTO ${table} (${cols.toString()})
+     VALUES (${printQuestionMarks(vals.length)});`;
 
-    console.log(queryString);
+     console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
@@ -51,11 +48,10 @@ const orm = {
   },
 
   update: function(table, objColVals, updValue, callback) {
-    let queryString = "UPDATE " + table;
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += updValue;
+
+    let queryString =
+    `UPDATE ${table} SET ${objToSql(objColVals)}
+     WHERE ${updValue};`;
 
     console.log(queryString);
 
@@ -65,8 +61,22 @@ const orm = {
       }
       callback(result);
     });
-  }
+  },
 
+  delete: function(table, updValue, callback) {
+  // DELETE FROM burgers WHERE id=3;
+
+    let queryString =
+      `DELETE FROM ${table} WHERE id = ${updValue};`;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      callback(result);
+    });
+  }
 };
 
 module.exports = orm;
