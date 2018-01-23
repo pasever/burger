@@ -3,7 +3,7 @@ const orm = require("../config/orm.js");
 const burger = {
 
   all: callback => {
-    orm.all("burgers", res => callback(res); );
+    orm.all("burgers", res => callback(res) );
   },
 
   create: (name, callback) => {
@@ -23,6 +23,7 @@ const burger = {
 
   delete: (id, callback) => {
     let updValue = `${id}`;
+    console.log(updValue);
     orm.delete("burgers", updValue, callback);
   }
 };

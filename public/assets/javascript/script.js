@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-  $(".devour-form").on("submit", event => {
+  $(".devour-form").on("submit", function(event) {
     event.preventDefault();
 
     let burger_id = $(this).children(".burger_id").val();
@@ -14,7 +14,7 @@ $(document).ready(() => {
     });
   });
 
-  $(".clear-form").on("submit", event => {
+  $(".clear-form").on("submit", function(event) {
     event.preventDefault();
 
     let burger_id = $(this).children(".burger_id").val();
